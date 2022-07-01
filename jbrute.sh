@@ -10,7 +10,7 @@ Help() {
   echo " -t		target to attack (*required)"
   echo " -b 		Request body to send (*required)"
   echo " -u		static userName to use"
-  echo " -uL		userName List to use"
+  echo " -U		userName List to use"
   echo " -p		static password to use"
   echo " -P		password List to use"
   echo " -x		use Proxychains4 to avoid lockouts."
@@ -32,7 +32,7 @@ Help() {
   echo "./jbrute.sh -t http://123.456.7.8/Some_Login -b '{"method":"global.login","params":{"userName":"@@U@@","password":"@@P@@","clientType":"Web3.0"},"id":3}' -U ./wordlist.txt -P default"
   echo
   echo "Username List and Password List with Proxychain"
-  echo "./jbrute.sh -t http://123.456.7.8/Some_Login -b '{"method":"global.login","params":{"userName":"@@U@@","password":"@@P@@","clientType":"Web3.0"},"id":3}' -u ./wordlist.txt -P ./wordlist.txt -x true"
+  echo "./jbrute.sh -t http://123.456.7.8/Some_Login -b '{"method":"global.login","params":{"userName":"@@U@@","password":"@@P@@","clientType":"Web3.0"},"id":3}' -U ./wordlist.txt -P ./wordlist.txt -x true"
 }
 
 while getopts t:b:u:U:p:P:x:h option
